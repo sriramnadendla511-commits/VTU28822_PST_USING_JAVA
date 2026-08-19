@@ -1,0 +1,27 @@
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class DAYOFYEAR {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
+
+        System.out.print("Enter month: ");
+        int month = sc.nextInt();
+
+        System.out.print("Enter day: ");
+        int day = sc.nextInt();
+
+        LocalDate date = LocalDate.of(year, month, day);
+
+        int dayOfYear = date.getDayOfYear();
+
+        System.out.println("Day of the year: " + dayOfYear);
+
+        sc.close();
+    }
+}
