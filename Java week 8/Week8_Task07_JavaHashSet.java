@@ -1,0 +1,35 @@
+package Week_Tasks.Week8_Tasks;
+
+import java.util.*;
+
+public class Week8_Task7_JavaHashSet {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = Integer.parseInt(sc.nextLine().trim());
+        Set<String> pairs = new HashSet<>();
+
+        for (int i = 0; i < t; i++) {
+            String[] parts = sc.nextLine().trim().split("\\s+");
+            pairs.add(parts[0] + " " + parts[1]);
+            System.out.println(pairs.size());
+        }
+    }
+}
+
+/*
+OUTPUT:
+Input:
+5
+john mary
+john tom
+john mary
+mary tom
+john tom
+
+Output:
+1
+2
+2
+3
+3
+*/
